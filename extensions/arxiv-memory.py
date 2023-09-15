@@ -21,7 +21,7 @@ class Arxiv(Extensions):
         search = arxiv.Search(
             query=query,
             max_results=max_articles,
-            sort_by=arxiv.SortCriterion.SubmittedDate
+            sort_by=arxiv.SortCriterion.SubmittedRelevance
         )
 
         pdf_paths = []
