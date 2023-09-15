@@ -16,7 +16,7 @@ class Arxiv(Extensions):
     def __init__(self, WORKING_DIRECTORY='./WORKSPACE'):
         self.WORKING_DIRECTORY = WORKING_DIRECTORY
     
-    async def search_and_download(self, query: str, max_articles: int = 5):
+    async def search_and_download(self, query: str, max_articles: int = 5, article_ids: List[str] = None, collection_number: int = 0):
 
         search = arxiv.Search(
             query=query,
